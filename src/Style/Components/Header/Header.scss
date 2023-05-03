@@ -1,0 +1,27 @@
+@use "../../Utils/Entry";
+
+nav {
+    display: flex;
+    flex-direction: row ;
+justify-content: space-between;
+font-family: Entry.$police;
+font-size: 12px;
+font-weight: 500;
+margin: 20px;
+color: Entry.$primary;
+}
+
+nav div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+a {
+    color: Entry.$primary;
+    text-decoration: none;
+}
+
+nav img {
+    width: 122px;
+    height: 40px;
+}
