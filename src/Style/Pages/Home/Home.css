@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+html {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+}
+
+.homePres {
+  color: white;
+  font-size: 24px;
+  width: 319px;
+  height: 111px;
+  margin: auto;
+  border-radius: 10px;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+  z-index: 1;
+  position: relative;
+}
+.homePres:after {
+  content: "";
+  display: block;
+  background: url("../../../Assets/Home.png") center/cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: -2;
+}
+.homePres:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 30%;
+  background-color: black;
+  z-index: -1;
+  border-radius: 10px;
+}/*# sourceMappingURL=Home.css.map */

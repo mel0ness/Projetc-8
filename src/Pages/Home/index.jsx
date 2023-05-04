@@ -3,7 +3,7 @@ import Card from "../../Components/CardLogement/index"
 
 const Home = ({logements}) => {
     return (
-        <div>
+        <div className="aSize">
         <div className="homePres">Chez vous,
             partout et ailleurs
         </div>

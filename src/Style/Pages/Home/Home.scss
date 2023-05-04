@@ -1,5 +1,10 @@
 @use "../../Utils/Entry.scss";
 
+.aSize {
+    width: 335px;
+    margin: auto;
+}
+
 .homePres {
     color: white;
     font-size: 24px;
@@ -13,7 +18,8 @@
     margin-bottom: 22px;
     z-index: 1;
     position: relative;
-    
+
+
     &:after {
 content: '';
 display: block;
