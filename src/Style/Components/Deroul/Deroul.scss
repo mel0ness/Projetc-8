@@ -1,0 +1,47 @@
+@use "../../Utils/Entry.scss";
+
+
+
+.deroulON {
+  
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    margin: auto;
+
+    & .deroul {
+        color: white;
+        background-color: Entry.$primary;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding : 5px 10px 5px 10px;
+        align-items: center;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+
+
+    & .deroulInfs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #F7F7F7;
+        color: Entry.$primary;
+    font-size: 12px;
+    padding: 10px 12px 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    top: -5px;
+    z-index : -1;
+    }
+}
+
+
+
+.deroulList {
+    list-style-type: none;
+    padding: 0;
+}

@@ -1,20 +1,18 @@
 @use "../../Utils/Entry.scss";
 
 footer {
-    height : 209px;
+    height : 203px;
     background-color: #000000;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    font-family: Entry.$police;
     font-size: 12px;
-    font-weight: 500;
-    padding-top: 62px;
+    gap: 36px;
 }
 
 footer img {
     width: 122px;
-    height: 40px;
+    height: 36px;
 }

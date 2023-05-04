@@ -1,21 +1,35 @@
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 import "../../Style/Pages/Error/Error.scss"
+import "../../Style/Pages/Logement/Logement.scss"
+import Deroul from "../../Components/Deroul/Deroul"
+import Galerie from "../../Components/Galerie/Galerie"
+import { useState } from "react"
+
+
 
 const Logement = (Logements) => {
-
+const [descr, updateDescr] = useState(false);
+const [equip, updateEquip] = useState(false);
+const [galerie, updateGalerie] = useState(0)
 const arrayLogements = Logements.Logements;
 const { idLogement } = useParams();
 const idList = arrayLogements.reduce((acc, Logements) => 
     acc.includes(Logements.id) ? acc : acc.concat(Logements.id), []
 )
 const securityID = idList.find((id) => id === idLogement);
+
 const idActual = arrayLogements.filter((d) => d.id === idLogement)
-console.log(idActual);
 
     return (
 securityID ? ( 
-        <div>Prout</div>
+
+
+<div>
+<Galerie state={galerie} updateState={updateGalerie} infs={idActual[0].pictures} />
+        <Deroul state={descr} updateState={updateDescr} infs={idActual[0].description} name={"Description"} parent={"Logement"} />
+        <Deroul state={equip} updateState={updateEquip} infs={idActual[0].equipments} name={"Equipements"} parent={"Logement"} /> 
+        </div>
     ) :  (<div>
     <div className="BlockError">
         <div className="BlockError--FourOFour">404</div>
