@@ -4,6 +4,8 @@ import "../../Style/Pages/Error/Error.scss"
 import "../../Style/Pages/Logement/Logement.scss"
 import Deroul from "../../Components/Deroul/Deroul"
 import Galerie from "../../Components/Galerie/Galerie"
+import Naming from "../../Components/Naming/Naming"
+import Rating from "../../Components/Rating/Rating"
 import { useState } from "react"
 
 
@@ -25,8 +27,10 @@ const idActual = arrayLogements.filter((d) => d.id === idLogement)
 securityID ? ( 
 
 
-<div>
+<div className="logementGlobal">
 <Galerie state={galerie} updateState={updateGalerie} infs={idActual[0].pictures} />
+<Naming infs={idActual[0].title} location={idActual[0].location} tags={idActual[0].tags} />
+<Rating infs={idActual[0].rating} host={idActual[0].host} />
         <Deroul state={descr} updateState={updateDescr} infs={idActual[0].description} name={"Description"} parent={"Logement"} />
         <Deroul state={equip} updateState={updateEquip} infs={idActual[0].equipments} name={"Equipements"} parent={"Logement"} /> 
         </div>

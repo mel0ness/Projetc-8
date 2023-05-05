@@ -1,0 +1,9 @@
+@use "../../Utils/Entry.scss";
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 20px 16px 20px;
+}

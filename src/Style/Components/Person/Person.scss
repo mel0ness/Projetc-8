@@ -1,0 +1,20 @@
+@use "../../Utils/Entry.scss";
+
+.PersonnAff {
+display: flex;
+flex-direction: row;
+color: Entry.$primary;
+font-size: 12px;
+align-items: center;
+gap: 10px;
+
+&--Name {
+    font-size: 12px;
+}
+
+&--Img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+}

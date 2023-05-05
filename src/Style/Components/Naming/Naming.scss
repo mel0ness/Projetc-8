@@ -1,0 +1,39 @@
+@use "../../Utils/Entry.scss";
+
+.location {
+    color: Entry.$primary;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 20px 15px 20px;
+    gap: 10px;
+
+    &--title {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    &--location {
+        font-size: 14px;
+    }
+    &--tags {
+     
+        color: white;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        &_element {
+            background-color: Entry.$primary;
+            width: 84px;
+            height: 18px;
+            font-size: 0.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+    }
+}
