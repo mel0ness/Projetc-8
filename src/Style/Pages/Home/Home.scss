@@ -1,16 +1,14 @@
 @use "../../Utils/Entry.scss";
 
 .aSize {
-    width: 335px;
     margin: auto;
 }
 
 .homePres {
     color: white;
     font-size: 24px;
-    width: 319px;
     height: 111px;
-    margin: auto;
+    margin: auto 20px auto 20px;
     border-radius: 10px;
     padding-left: 16px;
     display: flex;
@@ -49,4 +47,55 @@ position: absolute;
         border-radius: 10px;
 
     }
+
+    @media (min-width: 700px) {
+        margin: 30px 100px 20px 100px;
+        justify-content: center;
+        font-size: 36px;
+       
+        
+
+        
+    }
+
+    @media (min-width: 1000px) {
+        margin: 63px 100px 43px 100px;
+        padding: 77px 0 77px 0;
+        font-size: 48px;
+        border-radius: 25px;
+
+        &:after {
+            border-radius: 25px;
+        }
+
+        &:before {
+            border-radius: 25px;
+        }
+    }
+}
+
+.LogementsHome {
+    margin: auto 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (min-width: 425px) {
+        background-color: #F6F6F6;
+        border-radius: 25px;
+        padding: 30px 0 30px 0;    
+        align-items: center;
+    }
+
+    @media (min-width: 700px) {
+        margin: auto 100px auto 100px;
+    }
+
+    @media (min-width: 1000px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 30px 50px 30px 50px;
+        gap: 50px;
+    } 
 }

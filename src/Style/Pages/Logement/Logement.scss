@@ -3,3 +3,44 @@
 .logementGlobal {
     margin-bottom: 40px;
 }
+
+.BlockDeroulLog {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 50px;
+        margin: auto;
+        align-items: flex-start;
+    }
+
+    @media (min-width: 1000px) {
+        width: unset;
+        margin: auto 100px auto 100px;
+    }
+}
+
+.BlockIdentity {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+        justify-content: space-between;
+      
+        margin: 16px auto 16px auto;
+    }
+
+    @media (min-width: 1000px) {
+        width: unset;
+        margin: 16px 100px 16px 100px;
+    }
+}

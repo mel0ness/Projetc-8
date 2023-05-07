@@ -8,8 +8,15 @@ font-size: 12px;
 align-items: center;
 gap: 10px;
 
+
+
 &--Name {
     font-size: 12px;
+    text-align: center;
+
+    @media (min-width: 1000px) {
+        font-size: 18px;
+    }
 }
 
 &--Img {

@@ -1,12 +1,11 @@
 import { useParams } from "react-router-dom"
-import { Link } from "react-router-dom"
-import "../../Style/Pages/Error/Error.scss"
 import "../../Style/Pages/Logement/Logement.scss"
 import Deroul from "../../Components/Deroul/Deroul"
 import Galerie from "../../Components/Galerie/Galerie"
 import Naming from "../../Components/Naming/Naming"
 import Rating from "../../Components/Rating/Rating"
 import { useState } from "react"
+import Error from "../Error"
 
 
 
@@ -29,18 +28,16 @@ securityID ? (
 
 <div className="logementGlobal">
 <Galerie state={galerie} updateState={updateGalerie} infs={idActual[0].pictures} />
+<div className="BlockIdentity">
 <Naming infs={idActual[0].title} location={idActual[0].location} tags={idActual[0].tags} />
-<Rating infs={idActual[0].rating} host={idActual[0].host} />
+<Rating infs={idActual[0].rating} host={idActual[0].host} /></div>
+<div className="BlockDeroulLog">
         <Deroul state={descr} updateState={updateDescr} infs={idActual[0].description} name={"Description"} parent={"Logement"} />
-        <Deroul state={equip} updateState={updateEquip} infs={idActual[0].equipments} name={"Equipements"} parent={"Logement"} /> 
+        <Deroul state={equip} updateState={updateEquip} infs={idActual[0].equipments} name={"Equipements"} parent={"Logement"} /> </div>
         </div>
-    ) :  (<div>
-    <div className="BlockError">
-        <div className="BlockError--FourOFour">404</div>
-        <div className="BlockError--explain">Oups! La page que vous demandez n'existe pas.</div>
-    </div>
-    <Link to="/" className="LinkError">Retourner sur la page d’accueil</Link>
-    </div>) )
+    ) :  (
+    <Error />
+    ) )
 }
 
 export default Logement

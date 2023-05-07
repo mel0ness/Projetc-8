@@ -4,17 +4,28 @@
     color: Entry.$primary;
     display: flex;
     flex-direction: column;
-    margin: 15px 20px 15px 20px;
+    margin: 15px 0 15px 0;
     gap: 10px;
+
+    @media (min-width: 700px) {
+        justify-content: space-between;
+        margin: 0;
+    }
 
     &--title {
         font-size: 18px;
         font-weight: 500;
         margin: 0;
+        @media (min-width: 1000px) {
+            font-size: 36px;
+        }
     }
 
     &--location {
         font-size: 14px;
+        @media (min-width: 1000px) {
+            font-size: 18px;
+        }
     }
     &--tags {
      
@@ -34,6 +45,12 @@
             justify-content: center;
             align-items: center;
             border-radius: 5px;
+
+            @media (min-width: 1000px) {
+                width: 115px;
+            height: 25px;
+            font-size: 0.6rem;
+                    }
         }
     }
 }

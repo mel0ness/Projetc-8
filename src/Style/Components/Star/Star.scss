@@ -3,4 +3,10 @@
 .Star {
     width: 13px;
     height: 13px;
+
+
+    @media (min-width: 1000px) {
+        width: 24px;
+        height: 24px;
+    }
 }

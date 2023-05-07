@@ -9,10 +9,10 @@ const Deroul = ({state, updateState, infs, name, parent}) => {
 return (
     state === true ? (<div className="deroulON">
         <div className={`deroul deroul--${parent}`} onClick={superToggle}>
-        <div>{name}</div>
-        <img src={ArrowTop} alt={state.name} />
+        <div className="deroul--name">{name}</div>
+        <img className="deroul--image" src={ArrowTop} alt={state.name} />
         </div>
-        <div className="deroulInfs">
+        <div className={`deroulInfs deroulInfs--${parent}`}>
             { name === "Equipements" ? (
                 <ul className="deroulList">
                     {infs.map(({d},index) => 
@@ -20,15 +20,15 @@ return (
             )}
                 </ul>
             ) 
-            :(infs)}
+            :(<div className="deroul--infsin">{infs}</div>)}
             </div>
         </div>
     ) :
     (
         <div className="deroulON">
         <div className={`deroul deroul--${parent}`} onClick={superToggle}>
-            <div>{name}</div>
-            <img src={ArrowBot} alt={state.name} />
+            <div className="deroul--name">{name}</div>
+            <img className="deroul--image" src={ArrowBot} alt={state.name} />
             </div></div>
     )
 )

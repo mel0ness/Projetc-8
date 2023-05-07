@@ -3,5 +3,9 @@
 .StarsComp {
     display: flex;
     flex-direction: row;
-    gap: 6.6px;
+    gap: 1px;
+
+    @media (min-width: 375px) {
+        gap: 6.6px;
+    }
 }

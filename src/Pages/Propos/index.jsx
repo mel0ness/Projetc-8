@@ -26,7 +26,7 @@ const Propos = () => {
         <Deroul state={respect} updateState={updateRespect} infs={Infos.Respect} name={"Respect"} parent={"Propos"} />
         <Deroul state={service} updateState={updateService} infs={Infos.Service} name={"Service"} parent={"Propos"} />
         <Deroul state={securite} updateState={updateSecurite} infs={Infos.Securite} name={"Sécurité"} parent={"Propos"} />
-        </div>
+       </div>
     )
 }
 

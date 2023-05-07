@@ -9,14 +9,14 @@ const Three = number - 2 ;
 const Four = number - 3;
 const Five = number - 4;
 
+const Stars = [One, Two, Three, Four, Five];
+
+
 return (
     <div className="StarsComp">
-<Star state={One} />
-<Star state={Two} />
-<Star state={Three} />
-<Star state={Four} />
-<Star state={Five} />
-
+        { Stars.map(({d}, index) => 
+        <Star state={Stars[index]} key={`${d}--${index}`} />)
+        }
     </div>
 )
 }
